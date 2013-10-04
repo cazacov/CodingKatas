@@ -1,9 +1,6 @@
 /**
  * Created with JetBrains WebStorm.
  * User: Victor
- * Date: 04.10.13
- * Time: 16:45
- * To change this template use File | Settings | File Templates.
  */
 module.exports = function() {
 
@@ -15,9 +12,16 @@ module.exports = function() {
 
         for (i = 1; i<= gameLength; i++)
         {
-            result.push(i);
+            if (i % 3 == 0) {
+                result.push('Fizz');
+            }
+            else if (i % 5 == 0) {
+                result.push('Buzz');
+            }
+            else {
+                result.push(i);
+            }
         }
-
         return result;
     }
 
