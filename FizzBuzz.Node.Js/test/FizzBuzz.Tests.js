@@ -36,12 +36,19 @@ describe("FizzBuzz Game", function() {
             result[1*3-1].should.equal('Fizz');
             result[2*3-1].should.equal('Fizz');
         })
-    })
+    });
     describe('for multiples of five', function(){
         it('returns "Buzz"', function() {
             var result = fizzBuzzGame.playFizzBuzzGame();
             result[1*5-1].should.equal('Buzz');
             result[2*5-1].should.equal('Buzz');
+        })
+    });
+    describe('for numbers which are multiples of both three and five', function(){
+        it('returns "FizzBuzz"', function() {
+            var result = fizzBuzzGame.playFizzBuzzGame();
+            result[1*3*5-1].should.equal('FizzBuzz');
+            result[2*3*5-1].should.equal('FizzBuzz');
         })
     })
 

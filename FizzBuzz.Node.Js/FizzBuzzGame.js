@@ -12,7 +12,10 @@ module.exports = function() {
 
         for (i = 1; i<= gameLength; i++)
         {
-            if (i % 3 == 0) {
+            if (i % (3*5) == 0) {
+                result.push('FizzBuzz');
+            }
+            else if (i % 3 == 0) {
                 result.push('Fizz');
             }
             else if (i % 5 == 0) {
