@@ -7,13 +7,21 @@
  */
 module.exports = function() {
 
-    function playFizzBuzzGame()
+    function _playFizzBuzzGame(gameLength)
     {
-        var result = new Array();
+        var i;
+        gameLength = typeof gameLength !== 'undefined' ? gameLength : 100;
+        var result = [];
+
+        for (i = 1; i<= gameLength; i++)
+        {
+            result.push(i);
+        }
+
         return result;
     }
 
     return {
-        playFizzBuzzGame: playFizzBuzzGame
+        playFizzBuzzGame: _playFizzBuzzGame
     };
 }();
