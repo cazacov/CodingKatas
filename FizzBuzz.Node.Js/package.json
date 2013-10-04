@@ -1,0 +1,18 @@
+{   "name" : "FizzBuzzKata",
+    "version" : "1.0.0",
+    "description": "FizzBuzz Kata in node.js",
+    "author": {
+        "name": "Victor Cazacov"
+    },
+    "dependencies" :
+    {
+        "mocha" : "*",
+        "should": "*"
+    },
+    "engines": {
+        "node": ">=0.8"
+    },
+    "scripts": {
+        "test": "make test"
+    }
+}
