@@ -1,5 +1,5 @@
 /**
- * Created with JetBrains WebStorm.
+ * Unit tests for the FizzBuzzGame.js
  */
 var fizzBuzzGame = require('../FizzBuzzGame');
 var should = require('should');
@@ -51,6 +51,4 @@ describe("FizzBuzz Game", function() {
             result[2*3*5-1].should.equal('FizzBuzz');
         })
     })
-
-
 });

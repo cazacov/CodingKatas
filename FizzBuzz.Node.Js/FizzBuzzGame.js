@@ -1,14 +1,15 @@
 /**
- * Created with JetBrains WebStorm.
- * User: Victor
+ * FizzBuzz game as described in http://codingdojo.org/cgi-bin/wiki.pl?KataFizzBuzz
  */
 module.exports = function() {
 
-    function _playFizzBuzzGame(gameLength)
+    function playFizzBuzzGame(gameLength)
     {
         var i;
-        gameLength = typeof gameLength !== 'undefined' ? gameLength : 100;
         var result = [];
+
+        // default game length is 100
+        gameLength = typeof gameLength !== 'undefined' ? gameLength : 100;
 
         for (i = 1; i<= gameLength; i++)
         {
@@ -28,7 +29,8 @@ module.exports = function() {
         return result;
     }
 
+    // JavaScript mumbo-jumbo to simulate "normal" class behavior
     return {
-        playFizzBuzzGame: _playFizzBuzzGame
+        playFizzBuzzGame: playFizzBuzzGame
     };
 }();

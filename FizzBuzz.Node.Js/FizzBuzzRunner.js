@@ -1,9 +1,5 @@
 /**
- * Created with JetBrains WebStorm.
- * User: Victor
- * Date: 04.10.13
- * Time: 16:49
- * To change this template use File | Settings | File Templates.
+ * Console runner for the FizzBuzzGame module
  */
 var fizzBuzzGame = require('./FizzBuzzGame.js');
 
