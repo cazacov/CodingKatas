@@ -6,29 +6,34 @@ namespace FizzBuzz
 {
     public class FizzBuzzGame
     {
-        public IEnumerable<string> PlayTheGame()
+        private readonly IResultPrinter printer;
+
+        public FizzBuzzGame(IResultPrinter printer)
         {
-            var result = new List<String>();
+            this.printer = printer;
+        }
+
+        public void PlayTheGame()
+        {
             for (var i = 1; i <= 100; i++)
             {
                 if (IsMultipleOfThree(i) && IsMultipleOfFive(i))
                 {
-                    result.Add("FizzBuzz");
-                } else if (IsMultipleOfThree(i))
+                    printer.Print("FizzBuzz");
+                } 
+                else if (IsMultipleOfThree(i))
                 {
-                    result.Add("Fizz");
+                    printer.Print("Fizz");
                 }
                 else if (IsMultipleOfFive(i))
                 {
-                    result.Add("Buzz");
+                    printer.Print("Buzz");
                 }
                 else
                 {
-                    result.Add(i.ToString(CultureInfo.InvariantCulture));
+                    printer.Print(i.ToString(CultureInfo.InvariantCulture));
                 }
             }
-            return result;
-
         }
 
         private static bool IsMultipleOfFive(int i)
