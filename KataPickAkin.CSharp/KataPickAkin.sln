@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PickAkin", "PickAkin\PickAkin.csproj", "{FF37F2E8-1175-4041-87F8-E73A67857425}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PickAkin.Tests", "PickAkin.Tests\PickAkin.Tests.csproj", "{3381C718-29F0-46CC-ACF6-DC7E482876AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FF37F2E8-1175-4041-87F8-E73A67857425}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF37F2E8-1175-4041-87F8-E73A67857425}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF37F2E8-1175-4041-87F8-E73A67857425}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF37F2E8-1175-4041-87F8-E73A67857425}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3381C718-29F0-46CC-ACF6-DC7E482876AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3381C718-29F0-46CC-ACF6-DC7E482876AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3381C718-29F0-46CC-ACF6-DC7E482876AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3381C718-29F0-46CC-ACF6-DC7E482876AA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
