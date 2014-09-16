@@ -20,7 +20,7 @@ namespace PickAkin.Tests
         Because of = 
             () => akinList = akinPicker.PickAkinProductCodes();
 
-        private It should_return_an_empty_list =
-            () => akinList.Any().ShouldBeFalse();
+        It should_return_an_empty_list =
+            () => akinList.ShouldBeEmpty();
     }
 }
