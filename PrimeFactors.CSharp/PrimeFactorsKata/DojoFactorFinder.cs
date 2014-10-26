@@ -1,8 +1,11 @@
 ﻿namespace PrimeFactorsKata
 {
-    public class FactorFinder
+    /// <summary>
+    /// Code we wrote during the Coding dojo on 2014-10-22 at CAXPerts
+    /// </summary>
+    public class DojoFactorFinder : IFactorFinder
     {
-        public PrimeSet CalculateResult(int value)
+        public PrimeSet FindFactors(long value)
         {
             if (value <= 1)
             {
@@ -10,10 +13,10 @@
             }
             
             var dividor = FindDivisor(2, value);
-            return new NonEmpty(dividor, CalculateResult(value / dividor));
+            return new NonEmpty(dividor, FindFactors(value / dividor));
         }
 
-        private int FindDivisor(int candidate, int value)
+        private long FindDivisor(long candidate, long value)
         {
             if (value%candidate == 0) 
                 return candidate;

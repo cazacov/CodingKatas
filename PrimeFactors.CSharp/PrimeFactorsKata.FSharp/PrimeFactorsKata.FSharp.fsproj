@@ -42,8 +42,15 @@
     <Reference Include="System.Numerics" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Library1.fs" />
+    <Compile Include="FunctionalPrimeFinder.fs" />
     <None Include="Script.fsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PrimeFactorsKata\PrimeFactorsKata.csproj">
+      <Name>PrimeFactorsKata</Name>
+      <Project>{10d4d8ba-ddff-4586-bb03-715b51e168cb}</Project>
+      <Private>True</Private>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>

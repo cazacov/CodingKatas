@@ -1,10 +1,15 @@
-﻿using System.Linq;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using NUnit.Framework;
+using PrimeFactorsKata.FSharp;
 
 namespace PrimeFactorsKata.Tests
 {
     [TestFixture]
-    public class PrimeFactorTest
+    public class FunctionalTests
     {
         private IFactorFinder factorFinder;
 
@@ -118,7 +123,6 @@ namespace PrimeFactorsKata.Tests
         }
 
         [Test]
-        [Ignore]
         public void Mersenne31_IsPrime()
         {
             const long number = 2147483647L;
@@ -138,19 +142,18 @@ namespace PrimeFactorsKata.Tests
         }
 
         [Test]
-        [Ignore]
         public void TwoPower63Minus1_IsNotPrime()
         {
             const long number = 9223372036854775807L;
             var results = factorFinder.FindFactors(number).ToList();
 
-            CollectionAssert.AreEquivalent(new[] { 7, 7, 73, 127, 337, 92737, 649657 }, results);
+            CollectionAssert.AreEquivalent(new[] { 7, 7, 73, 127, 337, 92737, 649657}, results);
         }
 
         [SetUp]
         public void GetFactorFinder()
         {
-            this.factorFinder = new DojoFactorFinder();
+            this.factorFinder = new FunctionalPrimeFinder();
         }
     }
 }

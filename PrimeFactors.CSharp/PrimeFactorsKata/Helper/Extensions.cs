@@ -4,9 +4,9 @@ namespace PrimeFactorsKata
 {
     public static class Extensions
     {
-        public static List<int> ToList(this PrimeSet set)
+        public static List<long> ToList(this PrimeSet set)
         {
-            var result = new List<int>();
+            var result = new List<long>();
 
             set.ForEach(result.Add);
             return result;

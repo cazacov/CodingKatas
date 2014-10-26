@@ -8,7 +8,7 @@ namespace PrimeFactorsKata
         {
             Console.WriteLine("Please enter numer:");
             int value = int.Parse(Console.ReadLine());
-            var results = new FactorFinder().CalculateResult(value);
+            var results = new DojoFactorFinder().FindFactors(value);
             Console.WriteLine("Result is:");
             Console.WriteLine(string.Join(", ", results.ToList()));
             Console.ReadLine();

@@ -42,6 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BobsTest.cs" />
+    <Compile Include="FunctionalTests.cs" />
     <Compile Include="PrimeFactorTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -49,6 +51,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\PrimeFactorsKata.FSharp\PrimeFactorsKata.FSharp.fsproj">
+      <Project>{ae2424e1-0189-42e3-bd42-90dc0c448eee}</Project>
+      <Name>PrimeFactorsKata.FSharp</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PrimeFactorsKata\PrimeFactorsKata.csproj">
       <Project>{10d4d8ba-ddff-4586-bb03-715b51e168cb}</Project>
       <Name>PrimeFactorsKata</Name>

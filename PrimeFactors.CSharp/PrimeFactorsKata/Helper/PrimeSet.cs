@@ -10,18 +10,18 @@ namespace PrimeFactorsKata
     /// </remarks>
     public abstract class PrimeSet
     {
-        public abstract PrimeSet Add(int newValue);
-        public abstract void ForEach(Action<int> action);
+        public abstract PrimeSet Add(long newValue);
+        public abstract void ForEach(Action<long> action);
     }
 
     public class Empty : PrimeSet
     {
-        public override PrimeSet Add(int newValue)
+        public override PrimeSet Add(long newValue)
         {
             return new NonEmpty(newValue, this);
         }
 
-        public override void ForEach(Action<int> action)
+        public override void ForEach(Action<long> action)
         {
             ;
         }
@@ -29,21 +29,21 @@ namespace PrimeFactorsKata
 
     public class NonEmpty : PrimeSet
     {
-        public NonEmpty(int newValue, PrimeSet set)  
+        public NonEmpty(long newValue, PrimeSet set)  
         {
             this.Value = newValue;
             this.Tail = set;
         }
 
-        public readonly int Value;
+        public readonly long Value;
         public readonly PrimeSet Tail;
 
-        public override PrimeSet Add(int newValue)
+        public override PrimeSet Add(long newValue)
         {
             return new NonEmpty(newValue, this);
         }
 
-        public override void ForEach(Action<int> action)
+        public override void ForEach(Action<long> action)
         {
             action(this.Value);
             this.Tail.ForEach(action);

@@ -1,10 +1,14 @@
-﻿using System.Linq;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using NUnit.Framework;
 
 namespace PrimeFactorsKata.Tests
 {
     [TestFixture]
-    public class PrimeFactorTest
+    public class BobsTest
     {
         private IFactorFinder factorFinder;
 
@@ -118,7 +122,6 @@ namespace PrimeFactorsKata.Tests
         }
 
         [Test]
-        [Ignore]
         public void Mersenne31_IsPrime()
         {
             const long number = 2147483647L;
@@ -150,7 +153,7 @@ namespace PrimeFactorsKata.Tests
         [SetUp]
         public void GetFactorFinder()
         {
-            this.factorFinder = new DojoFactorFinder();
+            this.factorFinder = new BobsFactorFinder();
         }
     }
 }
