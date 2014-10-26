@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -132,12 +133,14 @@ namespace PrimeFactorsKata.Tests
         }
 
         [Test]
-        [Ignore]
         public void Mersenne61_IsPrime()
         {
             const long number = 2305843009213693951L;
+            var sw = new Stopwatch();
+            sw.Start();
             var results = factorFinder.FindFactors(number).ToList();
-
+            sw.Stop();
+            Console.WriteLine("Execution time: {0}", sw.Elapsed);
             CollectionAssert.AreEquivalent(new[] { 2305843009213693951L }, results);
         }
 

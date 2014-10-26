@@ -22,8 +22,6 @@
                 return candidate;
             else if (candidate > value / candidate)  // search up to sqrt(value)
                 return value;
-            else if (candidate > 2)
-                return FindDivisor(candidate + 2, value);  // from 3 we can jump directly to 5, 7, etc
             else
                 return FindDivisor(candidate + 1, value);
         }

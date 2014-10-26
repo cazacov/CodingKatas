@@ -7,12 +7,12 @@ using Machine.Specifications;
 
 namespace PickAkin.Tests
 {
-    [Subject(typeof(AkinPicker), "Extreme cases")]
+    [Tags("Extreme cases")]
+    [Subject(typeof(AkinPicker))]
     public class When_both_lists_are_empty : AkinPickerSpecs
     {
         Establish context = () =>
         {
-            akinPicker = new AkinPicker();
             ceoList = new List<string>();
             controlList = new List<string>();
         };
@@ -22,5 +22,8 @@ namespace PickAkin.Tests
 
         It should_return_an_empty_list =
             () => akinList.ShouldBeEmpty();
+        
+
+        
     }
 }

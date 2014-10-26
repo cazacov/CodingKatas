@@ -118,7 +118,6 @@ namespace PrimeFactorsKata.Tests
         }
 
         [Test]
-        [Ignore]
         public void Mersenne31_IsPrime()
         {
             const long number = 2147483647L;
