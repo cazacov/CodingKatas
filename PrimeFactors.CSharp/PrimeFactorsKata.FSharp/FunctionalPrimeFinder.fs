@@ -18,5 +18,6 @@ type FunctionalPrimeFinder() =
             let divisor = FindDivisor(2L, value)
             upcast new PrimeFactorsKata.NonEmpty(divisor, DoFindFactors(value / divisor))
     
+// public members
     interface IFactorFinder with
         member this.FindFactors(num) = DoFindFactors(num)

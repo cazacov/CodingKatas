@@ -127,8 +127,11 @@ namespace PrimeFactorsKata.Tests
         public void Mersenne31_IsPrime()
         {
             const long number = 2147483647L;
+            var sw = new Stopwatch();
+            sw.Start();
             var results = factorFinder.FindFactors(number).ToList();
-
+            sw.Stop();
+            Console.WriteLine("Elapsed time: {0}", sw.Elapsed);
             CollectionAssert.AreEquivalent(new[] { 2147483647L }, results);
         }
 
